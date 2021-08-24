@@ -1,0 +1,289 @@
+	
+	/*--HTML ELEMENTS--*/
+	*{
+		text-shadow: 2px 1px black;
+	}
+	input{
+		border-radius: 5px;
+		padding: 5px;
+		width: 200px;
+		font-size: 12px;
+		border: cyan solid 1px;
+		box-shadow: 3px 3px skyblue;
+		background-color: rgb(255,255,255,0.9);
+		text-shadow: none;
+	}
+	.readonly{
+		color: white;
+		background-color: rgb(0,0,0,.5);
+	}
+	legend{
+		cursor: pointer;
+		box-shadow: 5px 5px cyan;
+		text-shadow: 3px 3px black;
+		border-radius: 15px 0px 15px 0px;
+		font-size: 24px;
+		color: white;
+		text-align: center;
+		width: 300px;
+		border:solid cyan 1px;
+		background-color: rgb(0,40,40,.9);
+		padding: 15px;
+	}
+	legend:hover{
+		font-size: 25px;
+		transition: .8s;
+		color: cyan;
+	}
+	fieldset{
+		color: white;
+		box-shadow: 4px 3px cyan;
+		border-radius: 10px;
+		border: 1px cyan solid;
+		background-color: rgb(0,20,20,.9);
+		margin-bottom: 5%;
+	}
+	p{
+		font-size: 16px;
+		cursor: pointer;
+		padding: 5px;
+	}
+	p:hover{
+		color: cyan;
+	}
+	/*--END OF HTML ELEMENTS--*/
+
+	/*----Title-(Label)----*/
+	#title{
+		margin-bottom: 20px;  
+		font-size: 34px;
+		border:cyan 2px solid;
+		padding: 30px;
+		background-color: rgb(0,40,40,.8);
+		text-shadow: 3px 2px maroon;
+		color: white;
+		border-radius: 50px 50px 10px 10px;
+		text-decoration:underline solid white;
+		cursor: pointer;
+		width: 1000px;
+		box-shadow: 4px 3px cyan;
+	}
+	#title:hover{
+		font-size: 33px;
+		transition: .8s;
+	}
+	/*----END----*/
+
+	/*----Employee-(fieldset)----*/
+	.employee_wrapper{
+		width: 1000px;
+		height: 380px;
+	}
+	/*----END----*/
+
+	/*----Employee-(div-content-left)----*/
+	#employee_left{
+		float: left;
+		width: 200px;
+		margin-top: 4%;
+		margin-left: 1%;
+	}
+	#profile_picture{
+		width: 180px;
+		height: 210px;
+	  	border: 2px solid cyan;
+	  	background-color: rgb(255,255,255,.1);
+	  	border-radius: 5px;
+	  	cursor:pointer;
+	}
+	#profile_status{
+		color: white;
+		font-size: 22px;
+		padding-left: 10px;
+	}
+	#choose_profile{
+		font-size: 12px;
+		cursor:pointer;  
+		background-color: dodgerblue;
+		color: white;
+		width: 100px;
+		height: 30px;
+		border-radius: 5px;
+	}
+	#choose_profile:hover{
+		background-color: rgb(0,0,0,.8);
+	}
+
+	/*----Employee-(div-content-middle)----*/
+	.employee_middle{
+		margin: 3.5% 5% 0% 22%;
+		width: 35%;
+		height: 280px;
+		text-align: left;
+		margin-left: 22%;
+	}
+	.employee_middle input,.employee_right input{
+		float: right;
+		width: 180px;
+	}
+	/*----Employee-(div-content-right)----*/
+	.employee_right{
+
+		text-align: left;
+		width: 37%;
+		height: 280px;
+		float: right;
+		margin-top: 4%;
+		margin-right: 4%;
+	}
+
+	/*----END of Employee field----*/
+
+	/*----Salary Infromation (fields)----*/
+	#regular_content,#honoranium_income_content,#other_deductions_content,
+	#other_income_content,#summary_income_content,#basic_income_content{
+		padding: 20px;
+	}
+
+	/*----Regular Deduction-(fieldset)----*/
+	.regular_wrapper{
+		float: right;
+		width: 500px;
+		height: 300px;
+		text-align: left;
+	
+	}
+	.regular_wrapper input{
+		float: right;
+		width: 200px;
+	}
+	/*----END of Regular Deduction field----*/
+
+	/*----Basic Income-(fieldset)----*/
+	.basic_income_wrapper{
+		float: left;
+		width: 450px;
+		height: 300px;
+		text-align: left;
+	}
+	.basic_income_wrapper input{
+		float: right;
+		width: 190px;
+	}
+	/*----END of Basic Income field----*/
+
+
+	/*----Honoranium Income-(fieldset)----*/
+	.honoranium_income_wrapper{
+		float: left;
+		width: 450px;
+		height: 250px;
+		text-align: left;
+		
+	}
+	.honoranium_income_wrapper input{
+		float: right;
+		width: 200px;
+	}
+	/*----END of Honoranium Income field----*/
+
+	/*----Other Deduction-(fieldset)----*/
+	.other_deductions_wrapper{
+		float: right;
+		width: 500px;
+		height: 550px;
+		text-align: left;
+
+	}
+	.other_deductions_wrapper input{
+		float: right;
+		width: 200px;
+	}
+	#other_deductions_content p{
+		margin-top: 7%;
+	}
+	/*----END of Other Deduction field----*/
+
+
+	/*----Other Income-(fieldset)----*/
+	.other_income_wrapper{
+		float: left;
+		width: 450px;
+		height: 250px;
+		text-align: left;
+	}
+	.other_income_wrapper input{
+		float: right;
+		width: 200px;
+	}
+
+	/*----END of Other Income field----*/
+
+	/*----Deduction Summary-(fieldset)----*/
+	.deduction_summary_wrapper{
+		float: right;
+		width: 500px;
+		height: 200px;
+	}
+	.deduction_summary_wrapper input{
+		float: right;
+		width: 200px;
+		height: 30px;
+		margin-right: 5%;
+	}
+	#deduction_summary_content label{
+		padding: 20px;
+		font-size: 24px;
+		color: cyan;
+		text-shadow: 2px 2px maroon;
+		cursor: pointer;
+	}
+	/*----END of Deduction Summary field----*/
+
+	/*----Deduction Summary-(fieldset)----*/
+	.summary_income_wrapper{
+		width: 450px;
+		height: 200px;
+		float: left;
+		margin-bottom: 5%;
+		text-align: left;
+	}
+	.summary_income_wrapper input{
+		float: right;
+		width: 200px;
+	}
+	/*----END of Deduction Summary field----*/
+
+	/*----Buttons----*/
+	.button_wrapper{
+		width: 1000px;
+		height: 100px;
+		float: right;
+		border:cyan 1px solid;
+		box-shadow: 4px 3px cyan;
+		border-radius: 10px;
+		background-color: rgb(0,20,20,.9);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.button_wrapper button{
+		margin-left: 1.5%;
+		padding: 15px 25px 15px 25px;
+		border-radius: 5px;
+		border:skyblue solid 1px;
+		background-color: rgb(0,80,80,.9);
+		color: white;
+		font-weight: bold;
+		font-size: 12px;
+		cursor: pointer;
+		box-shadow: 2px 2px skyblue;
+	}
+	.button_wrapper button:hover{
+		border-color:white ;
+		font-size: 13px;
+		box-shadow: 3px 2px skyblue;
+		transition: .8s;
+		
+	}
+	/*----END of Buttons----*/

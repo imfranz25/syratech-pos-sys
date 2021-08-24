@@ -1,0 +1,399 @@
+
+  /*--HTML ELEMENTS--*/
+  body{
+    background-color: rgb(0,40,40,.8);
+    background-image: url('../images/logbg.jpg');
+    background-size:cover;
+  }
+  a,#forgot{
+    text-decoration: none;
+    color: deepskyblue;
+  }
+  a:hover{
+    color:cyan;
+  }
+ 
+  /*--END--*/
+  img{
+    cursor: pointer;
+    background: transparent;
+    margin-bottom: -5%;
+    margin-right: 10px;
+  }
+  img:hover{
+    transition: 1s;
+    transform:rotate3d(1,2,1,360deg);
+  }
+  /*---------------------LOGIN BOX------------------------*/
+  .login_container{
+    margin-top: 10%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .loginBox{
+    box-sizing: border-box;
+    color: white;
+    border-radius: 20px 20px;
+    background: rgba(0,0,0,.8);
+    border: rgb(0,0,0,.7) 1px solid;
+    width: 380px;
+    padding-bottom: 30px;
+    box-shadow: 4px 3px cyan;
+  }
+  /*--LOGIN BUTTON--*/
+  .loginBox button{
+    color: white;
+    font-size: 17px;
+    background: rgb(20,150,120,.6);
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 7%;
+    margin-left: 12.5%;
+    text-shadow:3px 2px black;
+    border: solid 1px cyan;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 265px;
+    height: 8vh;
+    margin-bottom: 5%;
+  }
+  /*--LOGIN BUTTON (HOVER)--*/
+  .loginBox button:hover{
+    background: rgb(20,150,120,.5);
+    color: cyan;
+  }
+  /*--LOGIN INPUT BOX--*/
+  .loginBox  input{ 
+    width: 240px;
+    margin-bottom: 10px; 
+    margin-top: 10px;
+    margin-left: 12.5%;
+    background: rgba(130,130,100,0.1);
+    padding: 10px;
+    font-size: 13px;
+    color: #fff;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 4px;
+    border-bottom: cyan solid 2px;
+    box-shadow: 3px 2px white;
+  }
+  #forgot{
+    margin: 0;
+    float: left;
+    margin-left: 12.5%;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .label_pointer{
+    font-size: 16px;
+    margin-left: 12.5%;
+    color: white;
+    float: left;
+    cursor: pointer;
+    margin-bottom: -2%;
+    margin-top: 3%;
+  }
+  #forgot:hover,.label_pointer:hover{
+    color: cyan;
+  }
+  #login_label{
+    color: cyan;
+    font-size: 40px;
+    font-weight: bolder;
+    text-decoration:underline solid cyan 5px;
+    text-shadow: 4px 3px maroon;
+    box-shadow: 3px 2px cyan;
+    padding: 20px 40px 20px 40px;
+    background-color: rgb(0,120,120,.8);
+    border-radius: 30px 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  #login_label:hover{
+    transition: .5s;
+    background-color: rgb(0,120,120,.6);
+    border-radius: 5px 30px;
+  }
+  #login_input{
+    margin-top: 7%;
+  }
+  /*---------------------End of LOGIN BOX------------------------*/
+
+
+
+  /*-----------------Modal Authentication-------------------*/
+   .modal,.modal_message {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0%;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+  }
+  /* Modal Header */
+  .modal-header,.modal_message_header {
+    padding: 2px 16px;
+    background-color: rgb(0,120,120,.6);
+    color: skyblue;
+    border:cyan 1px solid;
+  }
+  .modal-header h2,.modal_message_header h2{
+    color: cyan;
+    font-weight: bolder;
+    text-decoration:underline solid cyan 5px;
+    text-shadow: 4px 3px maroon;
+    text-align: center;
+    cursor: pointer;
+  }
+  .modal_message_header h2{
+    text-decoration:none;
+  }
+  /* Modal Body */
+  .modal-body,.modal_message_body,.modal-body-forgot{
+    padding: 8%;
+    background-color: rgb(0,120,120,.3);
+  }
+  .modal_message_body_log{
+    padding: 2%;
+    background-color: rgb(0,120,120,.3);
+  }
+  #msg{
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+  .modal-body label{
+    cursor: pointer;
+    color: white;
+  }
+  .modal-body label:hover,#msg:hover{
+    color: cyan;
+  }
+  /* Modal Footer */
+  .modal-footer,.modal_message_footer{
+      background-color: rgb(0,120,120,.6);
+      border:solid 1px cyan;
+      color: white;
+  }
+  
+  /* The Close Button */
+  .close,.modal_message_close,#close{
+    text-shadow: 3px 2px black;
+    color: cyan;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  .close:hover,#close:hover,
+  .close:focus,.modal_message_close:hover {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /* The Resend Button */
+  .resend {
+    float: left;
+    padding: 10px 13px 8px 13px;
+    margin: 20px 0px 20px 20px;
+  }
+  /*---Submit Button--*/
+  .csub,.ok,.ok_log{
+    width: 100px;
+    height: 40px;
+  }
+  .ok_log{
+    margin: 3%;
+  }
+  .ok{
+    margin: 5%;
+  }
+  .csub{
+    margin: 20px 0px 20px 100px;
+  }
+  #cancel_logout{
+     margin-left: 100px;
+  }
+  #submit_forgot{
+    margin-left: 0;
+  }
+  .csub,.resend,.ok,.ok_log{
+    text-shadow: 3px 2px black;
+    box-shadow: 3px 2px white;
+    background: rgb(0,0,0,.4);
+    font-size: 16px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px 5px;
+    border:2px solid skyblue;
+  }
+  .resend:hover,.csub:hover,.ok:hover {
+    color: cyan;
+    text-decoration: none;
+    cursor: pointer;
+    border-color:cyan ;
+  }
+  /* Modal Content */
+  .modal-content,.modal_message_content,.modal_message_content_log{
+    position: relative;
+    margin: auto;
+    border: 1px solid gray;
+    box-shadow: 100px red;
+    width: 370px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.9),0 6px 20px 0 rgba(0,0,0,0.9);
+    animation-name: animatetop;
+    animation-duration: 1.2s;
+    margin-top: 18%;
+    background: rgb(0,0,0.8);
+  }
+  .modal_message_content_log{
+    margin-top: 3%;
+    width: 800px;
+  }
+  .modal-body input,.modal-body-forgot input{ 
+    width: 230px; 
+    margin-bottom: 10px; 
+    padding: 10px;
+    font-size: 13px;
+    color: white;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 4px;
+    box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+    margin-top: 10px;
+    background: rgba(130,130,100,0.1);
+    border-bottom: cyan solid 2px;
+    box-shadow: 3px 2px white;
+  }
+  #modal_message_content_forgot{
+    margin-top: 13.5%;
+  }
+  .modal-body-forgot{
+    padding-top: 10px;
+    padding-left: 50px;
+  }
+  .modal-body-forgot input{
+    width: 250px;
+    margin-top: 1%;
+  }
+  .forgot_pointer{
+    padding-top: 20px;
+    font-size: 16px;
+    color: white;
+    float: left;
+    cursor: pointer;
+  }
+  #backup_option input[type="radio"],#backup_option label{
+    margin-left: 2%;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+  #backup_option{
+    font-size: 24px;
+    color: white;
+    text-shadow: 2px 1px black;
+  }
+  #backup_option input[type="submit"]{
+    margin-top: 5%;
+    width: 260px;
+    height: 50px;
+    cursor: pointer;
+    text-shadow: 3px 2px black;
+    box-shadow: 3px 2px white;
+    background: rgb(83,183,183,.1);
+    font-size: 16px;
+    font-weight: bolder;
+    color: white;
+    border:2px solid skyblue;
+  }
+  #backup_option input[type="submit"]:hover{
+    background: rgb(255,255,255,.1);
+    color: cyan;
+  }
+  /* Add Animation */
+  @keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
+  /*-----------------End of Modal Authentication-------------------*/
+     
+
+  /*----Landing page---*/
+  .main-wrapper,.wrapper,.center_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrapper{
+    width: 1200px;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+  .main_wrapper{
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .body_wrapper h1{
+    font-size: 72px;
+    text-align: center;
+    text-shadow:5px 4px white;
+    color: deepskyblue;
+    cursor: pointer;
+    padding: 50px;
+    background: rgb(20,150,120,.4);
+    border-radius: 20px 20px;
+    box-shadow: 0px 0px 2px 2px cyan;
+  }
+  .body_wrapper h1:hover{
+    transition: 1s;
+    background: rgb(20,150,120,.6);
+    border-radius: 80px 20px;
+    box-shadow: 0px 0px 10px 2px cyan;
+  }
+  .body_wrapper{
+    padding-bottom: 30px;
+  }
+  .body_wrapper button{
+    width: 200px;
+    height: 35px;
+    cursor: pointer;
+    color: white;
+    font-size: 17px;
+    background: rgb(20,150,120,.6);
+    border-radius: 5px;
+    text-shadow:3px 2px black;
+    border: solid 1px cyan;
+  }
+  .center_wrapper legend{
+    cursor: pointer;
+    width: 600px;
+    color: cyan;
+    font-size: 45px;
+    font-weight: bolder;
+    text-decoration:underline solid cyan 5px;
+    text-shadow: 4px 3px maroon;
+    box-shadow: 0px 0px 5px 1px cyan;
+    padding: 30px;
+    background-color: rgb(0,120,120,.8);
+    border-radius: 30px 5px;
+    text-align: center;
+  }
+  .center_wrapper legend:hover{
+    transition: .8s;
+    background-color: rgb(0,120,120,.6);
+    border-radius: 5px 30px;
+  }
+  .center_wrapper fieldset{
+    color: white;
+    box-shadow: 10px 10px rgb(110,250,230,.5);
+    border-radius: 10px;
+    border: 1px cyan dotted;
+    background-color: rgb(0,0,0,.7);
+    margin-bottom: 5%;
+  }
+  /*----End Landing page---*/
