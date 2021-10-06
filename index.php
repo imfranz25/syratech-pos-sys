@@ -1,28 +1,18 @@
 <?php session_start();  ?>
-<!doctype html>
-<html lang="en">
-<head>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles/style.css?v=<?php echo(time()) ?>">
-  <title>POS | Francis Condino Ong</title>
-  <?php 
+<!DOCTYPE html>
+<html lang="en-us">
+<?php 
+  require 'head.php'; 
   include 'includes/connection.php';
-  if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] == 'true' && isset($_SESSION['user_id']) && isset($_SESSION['username']) && isset($_GET['user_id'])){
-    $user_id = $_GET['user_id']; // get passed user_id
+  if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] == 'true' && isset($_SESSION['user_id']) && isset($_SESSION['username'])){
+    $user_id = $_SESSION['user_id']; // get passed user_id
   } 
   else{echo "<script>window.location.replace('accounts/login.php');</script>";}
   ?>
-
-
-</head>
-<body>
-
-
+<body onload="loader()">
+  <div class="lds-hourglass" id="loader"></div>
   <!--------------------------------------Header------------------------------>
   <header class="cd-main-header js-cd-main-header" id="top-header">
-
     <!-------------------Logo-------------------------->
     <div class="cd-logo-wrapper">
       <a href="index.php" class="cd-logo" id="logo"><img src="images/syra.png" alt="SyraTech Website" height="70" width="100" ></a>
@@ -37,33 +27,26 @@
   <!---------------------------------End of Header------------------------------>
 
   <main class="cd-main-content">
-
     <!--=====Side Bar Navigation=====-->
     <nav class="cd-side-nav js-cd-side-nav" id="side_wrapper" >
       <ul class="cd-side__list js-cd-side__list" id="sidebar">
         <li class="cd-side__label"><span>Main</span></li>
-        <li class="cd-side__item" ><a id="homepage" href="index.php?user_id=<?php echo $user_id  ?>">Home</a>
+        <li class="cd-side__item" ><a id="homepage" href="index.php">Home</a>
         <?php 
-            $user_type = '';
-            $con = mysql_connect(); // connection
-            $query = "SELECT * FROM account WHERE username = '".$_SESSION['username']."' ";
-            $result = mysqli_query($con,$query);
-            if (mysqli_num_rows($result) > 0 ) {
-              while ($row = mysqli_fetch_assoc($result)) {
-                if (password_verify($row['employee_no'],$user_id)) {
-                  $user_type = $row['user_type'];
+            $con = mysql_connect(); // connection  
+                  $user_type = $_SESSION['user_type'];
                   $original_id = $_SESSION['user_id'];
                   if ($user_type == 'Administrator') {
-                    echo "<li class='cd-side__item'><a id='emp_page' href='index.php?user_id=$original_id&page=employee'>Employee</a></li>
-                          <li class='cd-side__item'><a id='payroll_page' href='index.php?user_id=$original_id&page=payroll'>Payroll</a></li>
-                          <li class='cd-side__item'><a id='pos1_page' href='index.php?user_id=$original_id&page=pos1'>Point of Sale A</a></li>
-                          <li class='cd-side__item'><a id='pos2_page' href='index.php?user_id=$original_id&page=pos2'>Point of Sale B</a></li>
+                    echo "<li class='cd-side__item'><a id='emp_page' href='index.php?page=employee'>Employee</a></li>
+                          <li class='cd-side__item'><a id='payroll_page' href='index.php?page=payroll'>Payroll</a></li>
+                          <li class='cd-side__item'><a id='pos1_page' href='index.php?page=pos1'>Point of Sale A</a></li>
+                          <li class='cd-side__item'><a id='pos2_page' href='index.php?page=pos2'>Point of Sale B</a></li>
                           <li class='cd-side__label'><span>Reports</span></li>
-                          <li class='cd-side__item'><a id='payroll_report' href='index.php?user_id=$original_id&page=payroll_report'>Payroll Report</a></li>
-                          <li class='cd-side__item'><a id='pos1_report' href='index.php?user_id=$original_id&page=pos1_sales'>Sales of Point of Sale A</a></li>
-                          <li class='cd-side__item'><a id='pos2_report' href='index.php?user_id=$original_id&page=pos2_sales'>Sales of Point of Sale B</a></li>
+                          <li class='cd-side__item'><a id='payroll_report' href='index.php?page=payroll_report'>Payroll Report</a></li>
+                          <li class='cd-side__item'><a id='pos1_report' href='index.php?page=pos1_sales'>Sales of Point of Sale A</a></li>
+                          <li class='cd-side__item'><a id='pos2_report' href='index.php?page=pos2_sales'>Sales of Point of Sale B</a></li>
                           <li class='cd-side__label'><span>Account</span></li>
-                          <li class='cd-side__item'><a id='account_page' href='index.php?user_id=$original_id&page=user'>User Account</a></li>";
+                          <li class='cd-side__item'><a id='account_page' href='index.php?page=user'>User Account</a></li>";
                   }
                   else if ($user_type == 'Accountant') {
                     echo "<li class='cd-side__item'><a id='payroll_page' href='index.php?user_id=$original_id&page=payroll'>Payroll</a></li><li class='cd-side__label'><span>Reports</span></li><li class='cd-side__item'><a id='payroll_report' href='index.php?user_id=$original_id&page=payroll_report'>Payroll Report</a></li>";
@@ -75,21 +58,17 @@
                     echo "<li class='cd-side__item'><a id='pos2_page'  href='index.php?user_id=$original_id&page=pos2'>Point of Sale B</a></li>";
                   }
                   echo "<li class='cd-side__item'><a href='index.php?user_id=$original_id&page=logout'>Logout</a></li>";
-                }
-                else{
-                  if (isset($_SESSION['user_id'])) {
-                      echo "<script>window.location.replace('index.php?user_id=".$_SESSION['user_id']."');</script>";
-                  }
-                  else{echo "<script>window.location.replace('accounts/login.php');</script>";}
-                }
-              }
-            }
+                
+
+                
+              
+            
             close_connection($con); // close connection
         ?>
       </ul>
     </nav>
     <!--=====End of Side Bar Navigation=====-->
-  
+    <div id="page">
     <!--=====Content Area=====-->
     <div class="cd-content-wrapper">
       <div class="text-component text-center">
@@ -159,5 +138,6 @@
     </div>
     <!--=====End of Content Area=====-->
   </main> 
+  </div>
 </body>
 </html>
