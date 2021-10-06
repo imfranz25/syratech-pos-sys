@@ -10,8 +10,8 @@
 <!--------------------------------PHP Codes Starts Here----------------------------->
 <?php
 	
-	if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] == 'true' && isset($_SESSION['user_id']) && isset($_SESSION['username']) && isset($_GET['user_id']) &&  isset($_GET['emp_id'])){
-	    $user_id = $_GET['user_id']; // get passed user_id
+	if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] == 'true' && isset($_SESSION['user_id']) && isset($_SESSION['username'])  &&  isset($_GET['emp_id'])){
+	    $user_id = $_SESSION['user_id']; // get passed user_id
 	    $emp_id = $_GET['emp_id']; // get passed user_id
 	} 
 	else{echo "<script>window.location.replace('accounts/login.php');</script>";}

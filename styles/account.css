@@ -42,7 +42,7 @@
     box-shadow: 4px 3px cyan;
   }
   /*--LOGIN BUTTON--*/
-  .loginBox button{
+  .loginBox input[type="submit"]{
     color: white;
     font-size: 17px;
     background: rgb(20,150,120,.6);
@@ -59,7 +59,7 @@
     margin-bottom: 5%;
   }
   /*--LOGIN BUTTON (HOVER)--*/
-  .loginBox button:hover{
+  .loginBox input[type="submit"]:hover{
     background: rgb(20,150,120,.5);
     color: cyan;
   }
@@ -117,6 +117,20 @@
   }
   #login_input{
     margin-top: 7%;
+  }
+  #alert{
+    color: white;
+    font-size: 24px;
+    background: rgb(255,0,0,.3);
+    border-radius: 5px;
+    margin-left: 12.5%;
+    margin-bottom: -5%;
+    text-shadow:3px 2px black;
+    border: solid 1px red;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 265px;
+    text-align: center;
   }
   /*---------------------End of LOGIN BOX------------------------*/
 

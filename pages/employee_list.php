@@ -3,8 +3,8 @@
 	<script src="js/jquery.js?v=<?php echo time(); ?>"></script>
 	<?php 
 	ob_start();
-	if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] == 'true' && isset($_SESSION['user_id']) && isset($_SESSION['username']) && isset($_GET['user_id'])){
-	    $user_id = $_GET['user_id']; // get passed user_id
+	if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] == 'true' && isset($_SESSION['user_id']) && isset($_SESSION['username'])){
+	    $user_id = $_SESSION['user_id']; // get passed user_id
 	} 
 		else{echo "<script>window.location.replace('accounts/login.php');</script>";
 
