@@ -13,8 +13,7 @@
 	<form method="POST">
 		<div class="container">
 			<h2 align="center"><label id="home">Point of Sale (A) Sales Report</label>
-				<input type="search" id="search"  placeholder="Search By Product Name" />
-				<button id="btnsearch" type="button" onclick="filter_search()">Search</button>
+				<input type="search" id="search"  placeholder="Search By Product Name" oninput="filter_search()" style="float: right;" />
 			</h2>	
 
 			<div class="table-wrapper">

@@ -13,8 +13,7 @@
 	<form method="POST">
 		<div class="container">
 			<h2 align="center"><label id="home">Syra Tech Payroll Report</label>
-				<input type="search" id="search"  placeholder="Search By Employee Name" />
-				<button id="btnsearch" type="button" onclick="filter_search()">Search</button>
+				<input type="search" id="search"  placeholder="Search By Employee Name" oninput="filter_search()" style="float: right;"/>
 			</h2>	
 
 			<div class="table-wrapper">
