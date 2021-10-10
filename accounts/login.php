@@ -8,8 +8,8 @@ include 'header.php';
 	<fieldset class="loginBox">
 		<legend id="login_label" ><img src="../images/syra.png" width="60" height="50">SyraTech</legend>
 			<!-----------Form-------------->
-			<h1 id="alert" style="display: none;">Login Failed</h1>
-	        <form id="login" action="../includes/functions.php"  method="post">
+			<h1 id="alert"  style="display: none;">Login Failed</h1>
+	        <form id="login" method="post">
 			        <div id="login_input">
 			        	<label class="label_pointer" for="user">Username</label>
 			        	<input type="text" name ="user" id="user" placeholder="Enter your username" required autocomplete="off">

@@ -13,7 +13,6 @@
 	<!--CSS Source-->
 	<link rel="stylesheet" type="text/css" href="../styles/account.css?v=<?php echo time(); ?>">
 	<!--JQuery Library-->
-	<script src="../js/jquery.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<!--JS Source-->
 	<script src="../js/action.js?v=<?php echo(time()) ?>"></script>

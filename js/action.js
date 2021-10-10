@@ -65,27 +65,30 @@ $(document).ready(function(){
 	//LOADING
 	$(window).on('load',function() {
       $('#loader').remove();
-    })
+    });
 
 	//LOG IN FUNCTION
 	$("#login").submit(function(e){
 		e.preventDefault();// do not refresh browser
 		var login = $(this).serialize();
-		$("#login :input").prop("disabled", true); // disable while requesting to log in
 	    $.ajax({
                 type: 'POST',
                 url: '../includes/functions.php',
                 data: login,
-                dataType: 'json',
-                success: function (data) {
-                    if (data.error){$('#alert').show();}
+                success: function (response) {
+                    if (response==1){
+                        $('#alert').show();
+                    }
                     else{
                     	$('#alert').hide();
-                    	window.location.replace("../index.php?user_id="+data.user_id);
+                    	window.location.replace('../index.php');
                     }
                 },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    alert("Status: " + textStatus); 
+                    alert("Error: " + errorThrown); 
+                } 
             });
-	    $("#login :input").prop("disabled", false);
 	});
 	//END OF LOG IN
 
