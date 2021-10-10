@@ -2,7 +2,7 @@
 session_start();
 include 'header.php'; 
 ?>
-<body>
+<body onload="loader()">
 	<div class="lds-hourglass" id="loader"></div>
 	<!-----------Login Box-------------->
 	<div class="login_container">
@@ -23,7 +23,7 @@ include 'header.php';
 	</fieldset>
 	</div>
 	<!-----------End of Login Box-------------->
-	
+
 </body>  
 </html>
 
