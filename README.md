@@ -1,5 +1,5 @@
 # syratech-pos-sys
-A repository for Final Project (Website) in Application and Emerging Technologies Laboratory 
+A repository for Final Project (Website) in Application and Emerging Technologies Laboratory (Individual Project)
 
 Website Link : https://syratechpos.000webhostapp.com
 Registered User Accounts : (for DEMO only)
