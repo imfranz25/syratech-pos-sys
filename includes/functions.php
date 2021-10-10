@@ -18,6 +18,7 @@
 					$_SESSION['authenticated'] = 'true';
 					$_SESSION['user_id'] = $user_id;
 					$_SESSION['username'] = $user;	
+					$_SESSION['timeout'] = time();
 					$output=0;
 				}
 			}

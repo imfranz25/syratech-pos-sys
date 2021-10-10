@@ -20,10 +20,10 @@
                     echo "<li class='cd-side__item'><a id='payroll_page' href='index.php?user_id=$original_id&page=payroll'><i class='fas fa-file-invoice mx-1'></i>Payroll</a></li><li class='cd-side__label'><span>Reports</span></li><li class='cd-side__item'><a id='payroll_report' href='index.php?user_id=$original_id&page=payroll_report'><i class='fas fa-clipboard mx-1'></i>Payroll Report</a></li>";
                   }
                   else if ($user_type == 'Cashier (1)') {
-                    echo "<li class='cd-side__item'><a id='pos1_page'  href='index.php?user_id=$original_id&page=pos1'>Point of Sale A</a></li>";
+                    echo "<li class='cd-side__item'><a id='pos1_page'  href='index.php?user_id=$original_id&page=pos1'><i class='fab fa-usps mx-1'></i>Point of Sale A</a></li>";
                   }
                   else{
-                    echo "<li class='cd-side__item'><a id='pos2_page'  href='index.php?user_id=$original_id&page=pos2'>Point of Sale B</a></li>";
+                    echo "<li class='cd-side__item'><a id='pos2_page'  href='index.php?user_id=$original_id&page=pos2'><i class='fab fa-usps mx-1'></i>Point of Sale B</a></li>";
                   }
                   echo "<li class='cd-side__item'><a href='index.php?user_id=$original_id&page=logout'><i class='fas fa-sign-out-alt mx-1'></i>Logout</a></li>";
             close_connection($con); // close connection

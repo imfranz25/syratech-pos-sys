@@ -71,6 +71,7 @@ $(document).ready(function(){
 	$("#login").submit(function(e){
 		e.preventDefault();// do not refresh browser
 		$('#login_loader').show();
+		$('#alert').hide();
 		var login = $(this).serialize();
 	    $.ajax({
                 type: 'POST',
