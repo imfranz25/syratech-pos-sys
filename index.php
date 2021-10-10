@@ -10,7 +10,7 @@
   else{echo "<script>window.location.replace('accounts/login.php');</script>";}
   ?>
 <body onload="loader()">
-  <div class="lds-hourglass" id="loader"></div>
+  <div class="lds-hourglass" id="loader" style="left: 50%;display:block;"></div>
   <!--------------------------------------Header------------------------------>
   <header class="cd-main-header js-cd-main-header" id="top-header">
     <!-------------------Logo-------------------------->
@@ -67,6 +67,7 @@
         ?>
       </ul>
     </nav>
+
     <!--=====End of Side Bar Navigation=====-->
     <div id="page">
     <!--=====Content Area=====-->

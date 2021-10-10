@@ -12,6 +12,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!--CSS Source-->
 	<link rel="stylesheet" type="text/css" href="../styles/account.css?v=<?php echo time(); ?>">
+	<link rel="stylesheet" href="../styles/loader.css?v=<?php echo(time()) ?>">
 	<!--JQuery Library-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<!--JS Source-->

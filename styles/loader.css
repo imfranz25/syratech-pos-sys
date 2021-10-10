@@ -1,9 +1,11 @@
 .lds-hourglass {
   position: fixed;
   top: 50%;
-  left: 50%;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 .lds-hourglass:after {
   content: " ";
