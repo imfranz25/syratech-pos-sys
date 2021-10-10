@@ -13,6 +13,11 @@
 	<!--CSS Source-->
 	<link rel="stylesheet" type="text/css" href="../styles/account.css?v=<?php echo time(); ?>">
 	<link rel="stylesheet" href="../styles/loader.css?v=<?php echo(time()) ?>">
+	<!--Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	<script src="https://kit.fontawesome.com/559bdd2f0e.js" crossorigin="anonymous"></script>  
+	<!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!--JQuery Library-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<!--JS Source-->

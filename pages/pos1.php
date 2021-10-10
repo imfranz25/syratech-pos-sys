@@ -115,7 +115,6 @@
 
 	<!----------------Products------------------->
 	<fieldset class="products">
-		<legend>Products</legend>
 		<!--Call Show Products PHP Function-->
 		<?php
 			show_products($product_display,$product_description,$product_price_info);
@@ -125,7 +124,6 @@
 <form method="POST">
 	<!--------------Order Details---------------->
 	<fieldset class="order_details">
-		<legend>Order Details</legend>
 			<!--------------Order Wrapper---------------->
 			<div id="order_details_wrapper">
 
@@ -154,7 +152,6 @@
 
 	<!-----------------Order Options---------------->
 	<fieldset class="cap_choice">
-		<legend>Cap Choices</legend>
 			<!-----------------Order Summary---------------->
 			<h2>Order Summary</h2>
 				<input type="text" id="order_summary" name="product_name" class="product_pricesss" readonly  /> 

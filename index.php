@@ -31,7 +31,7 @@
     <nav class="cd-side-nav js-cd-side-nav" id="side_wrapper" >
       <ul class="cd-side__list js-cd-side__list" id="sidebar">
         <li class="cd-side__label"><span>Main</span></li>
-        <li class="cd-side__item" ><a id="homepage" href="index.php">Home</a>
+        <li class="cd-side__item" ><a id="homepage" href="index.php"><i class='fas fa-home mx-1'></i>Home</a>
         <?php require 'pages/sidebar.php' ?>
       </ul>
     </nav>

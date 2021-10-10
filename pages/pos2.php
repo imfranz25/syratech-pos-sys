@@ -138,7 +138,6 @@
 
 	<!----------------Products------------------->
 	<fieldset class="products">
-		<legend>Products</legend>
 		<!----------------Call Show Product Function from PHP------------------->
 		<?php
 			show_products($product_display,$product_description,$product_price_info);
@@ -151,8 +150,6 @@
 
 		<!--------------Order Details---------------->
 		<fieldset class="order_details">
-			<legend>Order Details</legend>
-
 				<!--------------Order Details Wrapper---------------->
 				<div id="order_details_wrapper">
 					<p>Product Name:<input type="text" name="product_name" id="product_name" value = "<?php echo $product_name;?>" /> </p>
@@ -179,8 +176,6 @@
 
 		<!-----------------Order Options---------------->
 		<fieldset class="order_options">
-			<legend class="ODT">Order Options</legend>
-
 				<!--------------Order Options---------------->
 				<div id="order_options">
 					<p>

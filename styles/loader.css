@@ -21,7 +21,7 @@
   animation: lds-hourglass 1.2s infinite;
 }
 @keyframes lds-hourglass {
-  0% {
+  0%{
     transform: rotate(0);
     animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
@@ -40,7 +40,7 @@
   -webkit-animation-name: animatebottom;
   -webkit-animation-duration: 1s;
   animation-name: animatebottom;
-  animation-duration: 1s
+  animation-duration: 1s;
 }
 
 @-webkit-keyframes animatebottom {

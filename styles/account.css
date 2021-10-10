@@ -42,7 +42,7 @@
     box-shadow: 4px 3px cyan;
   }
   /*--LOGIN BUTTON--*/
-  .loginBox input[type="submit"]{
+  .loginBox button{
     color: white;
     font-size: 17px;
     background: rgb(20,150,120,.6);
@@ -59,7 +59,7 @@
     margin-bottom: 5%;
   }
   /*--LOGIN BUTTON (HOVER)--*/
-  .loginBox input[type="submit"]:hover{
+  .loginBox button:hover{
     background: rgb(20,150,120,.5);
     color: cyan;
   }

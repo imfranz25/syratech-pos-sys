@@ -70,6 +70,7 @@ $(document).ready(function(){
 	//LOG IN FUNCTION
 	$("#login").submit(function(e){
 		e.preventDefault();// do not refresh browser
+		$('#login_loader').show();
 		var login = $(this).serialize();
 	    $.ajax({
                 type: 'POST',
@@ -83,6 +84,7 @@ $(document).ready(function(){
                     	$('#alert').hide();
                     	window.location.replace('../index.php');
                     }
+                    $('#login_loader').hide();
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
                     alert("Status: " + textStatus); 

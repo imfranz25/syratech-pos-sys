@@ -17,7 +17,10 @@ include 'header.php';
 			        	<label class="label_pointer" for="pass">Password</label>
 				    	<input type="password" name="pass" id="pass" placeholder="Enter your password" required>
 			        </div>
-			        <input type="submit" id="submit_login" name="submit" value="Log in" />
+			        
+			        <button type="submit" id="submit_login" name="submit">
+			        	<span>Log in  <i id="login_loader" class="fa fa-spinner fa-spin" style="display: none;"></i></span>
+			        </button>
 	        </form>
 	        <!-----------End of Form-------------->  
 	</fieldset>
