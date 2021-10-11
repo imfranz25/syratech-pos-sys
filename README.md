@@ -1,7 +1,11 @@
 # syratech-pos-sys
-A repository for Final Project (Website) in Application and Emerging Technologies Laboratory 
+A repository for Final Project (Website) in Application and Emerging Technologies Laboratory (Individual Project)
 
 Website Link : https://syratechpos.000webhostapp.com
+
+Registered User Accounts : (for DEMO only)
+  - Cashier A : (Username : hannah), Cashier B : (Username : jason), and Accountant : (Username : sarah).
+  - Password : Qq!123456789
 
 Features:
 - Four (4) Registered User Level -- (Administrator, Cashier 1, Cashier 2, Accountant)
