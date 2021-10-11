@@ -61,12 +61,10 @@ function showPage() {
 
 //JQUERY
 $(document).ready(function(){
-
 	//LOADING
 	$(window).on('load',function() {
       $('#loader').remove();
     });
-
 	//LOG IN FUNCTION
 	$("#login").submit(function(e){
 		e.preventDefault();// do not refresh browser
@@ -79,10 +77,12 @@ $(document).ready(function(){
                 data: login,
                 success: function (response) {
                     if (response==1){
-                        $('#alert').show();
+                        $('#alert-failed').show();
+                        $('#alert-success').hide();
                     }
                     else{
-                    	$('#alert').hide();
+                    	$('#alert-failed').hide();
+                        $('#alert-success').show();
                     	window.location.replace('../index.php');
                     }
                     $('#login_loader').hide();

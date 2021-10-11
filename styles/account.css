@@ -1,35 +1,34 @@
-
   /*--HTML ELEMENTS--*/
   body{
     background-color: rgb(0,40,40,.8);
     background-image: url('../images/logbg.jpg');
     background-size:cover;
+    background-repeat: no-repeat;
   }
-  a,#forgot{
+  a{
     text-decoration: none;
     color: deepskyblue;
   }
   a:hover{
     color:cyan;
   }
- 
-  /*--END--*/
   img{
     cursor: pointer;
     background: transparent;
-    margin-bottom: -5%;
-    margin-right: 10px;
   }
   img:hover{
     transition: 1s;
     transform:rotate3d(1,2,1,360deg);
   }
+  /*--END--*/
+
   /*---------------------LOGIN BOX------------------------*/
   .login_container{
     margin-top: 10%;
     padding: 0;
     display: flex;
     justify-content: center;
+    border: 1px solid red;
   }
   .loginBox{
     box-sizing: border-box;
@@ -40,6 +39,7 @@
     width: 380px;
     padding-bottom: 30px;
     box-shadow: 4px 3px cyan;
+    padding: 0px 50px 0px 50px;
   }
   /*--LOGIN BUTTON--*/
   .loginBox button{
@@ -48,15 +48,13 @@
     background: rgb(20,150,120,.6);
     cursor: pointer;
     border-radius: 5px;
-    margin-top: 7%;
-    margin-left: 12.5%;
+    margin: 7% 0 15% 0;
     text-shadow:3px 2px black;
     border: solid 1px cyan;
     padding-top: 10px;
     padding-bottom: 10px;
-    width: 265px;
-    height: 8vh;
-    margin-bottom: 5%;
+    width: 100%;
+    height: auto;
   }
   /*--LOGIN BUTTON (HOVER)--*/
   .loginBox button:hover{
@@ -65,10 +63,8 @@
   }
   /*--LOGIN INPUT BOX--*/
   .loginBox  input{ 
-    width: 240px;
-    margin-bottom: 10px; 
-    margin-top: 10px;
-    margin-left: 12.5%;
+    width: 100%;
+    margin-bottom: 10px;
     background: rgba(130,130,100,0.1);
     padding: 10px;
     font-size: 13px;
@@ -78,20 +74,11 @@
     border-bottom: cyan solid 2px;
     box-shadow: 3px 2px white;
   }
-  #forgot{
-    margin: 0;
-    float: left;
-    margin-left: 12.5%;
-    font-size: 12px;
-    cursor: pointer;
-  }
   .label_pointer{
     font-size: 16px;
-    margin-left: 12.5%;
     color: white;
     float: left;
     cursor: pointer;
-    margin-bottom: -2%;
     margin-top: 3%;
   }
   #forgot:hover,.label_pointer:hover{
@@ -99,16 +86,21 @@
   }
   #login_label{
     color: cyan;
-    font-size: 40px;
     font-weight: bolder;
     text-decoration:underline solid cyan 5px;
     text-shadow: 4px 3px maroon;
     box-shadow: 3px 2px cyan;
-    padding: 20px 40px 20px 40px;
     background-color: rgb(0,120,120,.8);
     border-radius: 30px 5px;
     cursor: pointer;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    padding: 15px;
+    margin-top: -30px;
   }
   #login_label:hover{
     transition: .5s;
@@ -118,19 +110,22 @@
   #login_input{
     margin-top: 7%;
   }
-  #alert{
+  #alert-failed,#alert-success{
     color: white;
     font-size: 24px;
     background: rgb(255,0,0,.3);
     border-radius: 5px;
-    margin-left: 12.5%;
-    margin-bottom: -5%;
+    width: 100%;
+    margin: 20px 0px -10px 0px;
     text-shadow:3px 2px black;
     border: solid 1px red;
     padding-top: 10px;
     padding-bottom: 10px;
-    width: 265px;
     text-align: center;
+  }
+  #alert-success{
+    background: rgb(0,255,0,.3);
+    border: solid 1px green;
   }
   /*---------------------End of LOGIN BOX------------------------*/
 

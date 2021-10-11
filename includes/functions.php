@@ -26,5 +26,4 @@
         echo json_encode($output);
     }
 	//End of Login Form 
-
 ?>

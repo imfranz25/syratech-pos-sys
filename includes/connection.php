@@ -7,7 +7,7 @@
         $dbpass = ''; // database password (blank by default)
         $dbname = 'syra'; // database name
         // return connection
-        return mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+        return new mysqli($dbhost,$dbuser,$dbpass,$dbname);
     }// End
     // Close Connection
     function close_connection($con){

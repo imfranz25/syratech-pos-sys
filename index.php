@@ -1,33 +1,14 @@
-<?php session_start();  ?>
-<!DOCTYPE html>
 <html lang="en-us">
 <?php 
-  require 'head.php'; 
+  session_start(); 
+  require 'pages/head.php'; 
   include 'includes/connection.php';
-  if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] == 'true' && isset($_SESSION['user_id']) && isset($_SESSION['username'])){
-    $user_id = $_SESSION['user_id']; // get passed user_id
-    require 'includes/timeout.php';
-  } 
-  else{echo "<script>window.location.replace('accounts/login.php');</script>";}
-
+  require 'accounts/authentication.php';
   ?>
 <body onload="loader()">
+  <!----------------Loading Screen--------------------->
   <div class="lds-hourglass" id="loader" style="left: 50%;display:block;"></div>
-  <!--------------------------------------Header------------------------------>
-  <header class="cd-main-header js-cd-main-header" id="top-header">
-    <!-------------------Logo-------------------------->
-    <div class="cd-logo-wrapper">
-      <a href="index.php" class="cd-logo" id="logo"><img src="images/syra.png" alt="SyraTech Website" height="70" width="100" ></a>
-
-    </div>
-    <!-----------------End of Logo--------------------->
-    <div id="header">
-      <a href="index.php">SyraTech Enterprise Application</a>
-    </div>
-
-  </header> 
-  <!---------------------------------End of Header------------------------------>
-
+  <?php require 'pages/header.php'; ?>
   <main class="cd-main-content">
     <!--=====Side Bar Navigation=====-->
     <nav class="cd-side-nav js-cd-side-nav" id="side_wrapper" >
